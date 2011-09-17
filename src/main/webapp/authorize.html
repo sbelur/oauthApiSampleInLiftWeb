@@ -1,0 +1,16 @@
+<div class="lift:surround?with=default;at=content">
+  <h2>
+   <lift:ApplicationUser.loggedInCheck>
+   	  <span id="loginCheck"></span>	
+   </lift:ApplicationUser.loggedInCheck>
+  </h2>
+  <p>
+    <div class="lift:Authorization.authorize">
+      Click to Authorize: - 
+      <lift:Authorization.authorize>
+        <auth:link/>
+      </lift:Authorization.authorize>
+    </div>
+  </p>
+</div>
+

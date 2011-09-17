@@ -1,0 +1,40 @@
+<div class="lift:surround?with=default;at=content">
+<head>
+ <link href="static/app.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<b><h2> Home Timeline </h2></b>
+
+<div id="output" class="parent">
+ 
+ </div>
+
+  
+ 
+ 
+  <script>
+  <![CDATA[
+ 	function render(arr){
+		var textToInsert = '';
+		for(var ctr=0;ctr < arr.length;ctr++){
+		  textToInsert += '<div  class="item">' + arr[ctr] + '</div>'; 
+		}
+		jQuery('#output').append(textToInsert);
+ 	}
+ 	
+ 	 jQuery(document).ready(function() {
+		   jQuery.ajax({
+			url: "/providers/twitter",
+			complete: function( res, status ) {
+				var obj = eval("("+res.responseText+")");
+				render(obj["coll"]);
+		    }
+		   })		
+		});
+ 	]]>
+ </script>
+ 
+
+  
+</div>
+
