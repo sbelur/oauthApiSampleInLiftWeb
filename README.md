@@ -19,6 +19,7 @@ The intention is to start off simple and gradually provide all features.
 
 <ul>
 <li> Please install maven </li>
+<li> cd to the dir containing pom.xml <top level)</li>
 <li> mvn clean install </li>
 </ul>
 
